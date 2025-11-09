@@ -22,7 +22,7 @@ fake_db = [
 
 @app.get("/")
 async def read_root():
-    return {"message": "Bem-vindo ao GitHub Actions com FastAPI!"}
+    return {"message": "GitHub Actions modified this!"}
 
 @app.get("/health")
 async def health_check():
