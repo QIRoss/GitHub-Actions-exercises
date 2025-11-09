@@ -14,6 +14,8 @@ services:
 
   tests:
     build: .
+    volumes:
+      - .:/app  # Monta o diretório atual no container
     command: ["pytest", "tests/", "-v"]
     depends_on:
       - web

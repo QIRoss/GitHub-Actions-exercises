@@ -31,14 +31,14 @@ jobs:
 
     - name: Run tests with pytest
       run: |
-        pytest tests/ -v --cov=app --cov-report=xml
+        pytest tests/ -v
 
-    - name: Upload coverage reports
-      uses: codecov/codecov-action@v3
-      with:
-        file: ./coverage.xml
-        flags: unittests
-        name: codecov-umbrella
+    # - name: Upload coverage reports
+    #   uses: codecov/codecov-action@v3
+    #   with:
+    #     file: ./coverage.xml
+    #     flags: unittests
+    #     name: codecov-umbrella
 
   build-and-push:
     name: Build and Push Docker Image
